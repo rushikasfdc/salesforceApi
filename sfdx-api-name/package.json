@@ -1,0 +1,40 @@
+{
+  "name": "salesforce-api-explorer",  
+  "displayName": "Salesforce API Explorer", 
+  "description": "Shows fields Api name without leaving visual studio",
+  "version": "0.0.1",
+  "publisher": "Rushika Pawar",
+  "engines": {
+    "vscode": "^1.94.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "icon": "assets/icon.png",
+  "main": "./extension.js",
+ "contributes": {
+    "commands": [
+      {
+        "command": "extension.selectSalesforceObject",
+        "title": "Get API Names"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.8",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.94.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.11.1"
+  },
+  "dependencies": {
+    "jsforce": "^3.5.2"
+  }
+}
